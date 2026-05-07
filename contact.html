@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Metals Made Simple</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C96A;
+    --gold-dark: #8B6914;
+    --black: #080706;
+    --white: #F5F0E8;
+    --muted: rgba(245,240,232,0.6);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    padding: 60px 32px;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(201,168,76,0.06) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .top-bar {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .series-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    letter-spacing: 5px;
+    color: var(--gold);
+    opacity: 0.9;
+  }
+
+  .gold-divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-dark), transparent);
+    margin: 10px auto 0;
+  }
+
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--gold-light);
+    text-align: center;
+    margin-bottom: 16px;
+    line-height: 1.1;
+  }
+
+  .subtitle {
+    text-align: center;
+    font-size: 16px;
+    color: var(--muted);
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+
+  .form-box {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 8px;
+    padding: 40px;
+  }
+
+  .form-field {
+    margin-bottom: 20px;
+  }
+
+  .form-field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gold-light);
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+
+  .form-field input,
+  .form-field textarea {
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 6px;
+    padding: 14px 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: var(--white);
+    outline: none;
+    transition: border-color 0.2s ease;
+  }
+
+  .form-field input::placeholder,
+  .form-field textarea::placeholder {
+    color: rgba(245,240,232,0.3);
+  }
+
+  .form-field input:focus,
+  .form-field textarea:focus {
+    border-color: rgba(201,168,76,0.6);
+    background: rgba(0,0,0,0.5);
+  }
+
+  .form-field textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 16px 24px;
+    background: linear-gradient(135deg, #FFE680, #F0C030, #D4A017);
+    border: none;
+    border-radius: 6px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    letter-spacing: 4px;
+    color: #000000;
+    font-weight: 900;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    margin-top: 10px;
+  }
+
+  .submit-btn:hover {
+    opacity: 0.92;
+    transform: translateY(-2px);
+  }
+
+  .note {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: rgba(245,240,232,0.4);
+    font-style: italic;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(201,168,76,0.1);
+  }
+
+  .footer-brand {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: rgba(201,168,76,0.4);
+    margin-bottom: 6px;
+  }
+
+  .footer-copy {
+    font-size: 10px;
+    color: rgba(245,240,232,0.2);
+    letter-spacing: 1px;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="top-bar">
+    <div class="series-name">✦ &nbsp; Metals Made Simple Series &nbsp; ✦</div>
+    <div class="gold-divider"></div>
+  </div>
+
+  <h1>Contact Us</h1>
+  <div class="subtitle">Have a question? We're here to help.</div>
+
+  <div class="form-box">
+    <form action="https://formspree.io/f/xwpkepbr" method="POST">
+      <div class="form-field">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-field">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+      </div>
+
+      <div class="form-field">
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" placeholder="What can we help you with?" required></textarea>
+      </div>
+
+      <input type="hidden" name="_next" value="https://metalsmadesimple.com/thank-you">
+      <input type="hidden" name="_subject" value="New Contact Form Submission - Metals Made Simple">
+      <input type="hidden" name="_cc" value="ask@metalsmadesimple.com">
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+
+    <div class="note">We'll respond to your message as quickly as possible.</div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-brand">MetalsMadeSimple.com &nbsp;·&nbsp; Metals Made Simple Series</div>
+    <div class="footer-copy">© Doyle Shuler. All rights reserved.</div>
+  </div>
+</div>
+
+</body>
+</html>

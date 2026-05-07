@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You — Metals Made Simple</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C96A;
+    --gold-dark: #8B6914;
+    --black: #080706;
+    --white: #F5F0E8;
+    --muted: rgba(245,240,232,0.6);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(201,168,76,0.06) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+    text-align: center;
+  }
+
+  .checkmark {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 32px;
+    font-size: 48px;
+    animation: scaleIn 0.5s ease;
+  }
+
+  @keyframes scaleIn {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-bottom: 16px;
+    line-height: 1.1;
+  }
+
+  .headline-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 40px;
+    line-height: 1.4;
+  }
+
+  .gold-rule {
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 0 auto 32px;
+  }
+
+  .body-text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+
+  .body-text strong {
+    color: var(--white);
+    font-weight: 600;
+  }
+
+  .next-steps {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 8px;
+    padding: 32px;
+    margin-top: 40px;
+  }
+
+  .next-steps h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  .next-steps ul {
+    list-style: none;
+    text-align: left;
+  }
+
+  .next-steps li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+
+  .next-steps li:last-child {
+    border-bottom: none;
+  }
+
+  .next-steps li strong {
+    color: var(--white);
+    font-weight: 600;
+  }
+
+  .footer {
+    margin-top: 60px;
+    font-size: 12px;
+    color: rgba(245,240,232,0.3);
+  }
+
+  .footer a {
+    color: var(--gold);
+    text-decoration: none;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="checkmark">✓</div>
+  
+  <h1>Success!</h1>
+  <div class="headline-sub">Check Your Inbox — Your 3 Free Guides Are On Their Way!</div>
+  
+  <div class="gold-rule"></div>
+  
+  <div class="body-text">
+    <strong>Your guides will arrive in the next few minutes.</strong><br>
+    Please check your email inbox (and spam folder, just in case) for an email from us.
+  </div>
+
+  <div class="next-steps">
+    <h2>What Happens Next</h2>
+    <ul>
+      <li><strong>Check your email</strong> — All 3 guides are being sent to the email address you provided.</li>
+      <li><strong>Review the guides</strong> — Each one contains specific, actionable information you can use immediately.</li>
+      <li><strong>Bookmark this series</strong> — More resources coming soon to help you buy and sell metals privately and profitably.</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p>© Doyle Shuler &nbsp;·&nbsp; <a href="https://metalsmadesimple.com">MetalsMadeSimple.com</a></p>
+    <p style="margin-top: 10px;">Metals Made Simple Series</p>
+  </div>
+</div>
+
+</body>
+</html>
