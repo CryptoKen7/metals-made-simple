@@ -253,32 +253,20 @@
     content: 'GUIDE';
   }
 
-  /* Coins visual */
-  .coins-visual {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    margin-bottom: 18px;
-    font-size: 42px;
+  /* Metals image visual */
+  .metals-visual {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(201,168,76,0.3);
   }
 
-  .coin {
-    display: inline-block;
-    animation: float 3s ease-in-out infinite;
-    filter: drop-shadow(0 4px 8px rgba(201,168,76,0.4));
-  }
-
-  .coin:nth-child(2) {
-    animation-delay: 0.5s;
-  }
-
-  .coin:nth-child(3) {
-    animation-delay: 1s;
-  }
-
-  @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-8px); }
+  .metals-visual img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   .footer {
@@ -351,10 +339,8 @@
     </a>
 
     <a href="https://save.metalsmadesimple.com" class="cta-card">
-      <div class="coins-visual">
-        <span class="coin">🪙</span>
-        <span class="coin">🥇</span>
-        <span class="coin">🥈</span>
+      <div class="metals-visual">
+        <img src="metals-image.jpg" alt="Gold and Silver Coins" />
       </div>
       <div class="title">Find the Lowest Metals Prices</div>
       <div class="url">save.metalsmadesimple.com</div>
