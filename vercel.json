@@ -4,6 +4,11 @@
       "source": "/save",
       "destination": "/save.html",
       "permanent": false
+    },
+    {
+      "source": "/review-privately",
+      "destination": "/review-privately.html",
+      "permanent": false
     }
   ]
 }
