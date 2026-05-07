@@ -170,87 +170,123 @@
     letter-spacing: 0.5px;
   }
 
-  /* Guide thumbnails preview */
+  /* Guide thumbnails preview - full version */
   .guide-preview {
     display: flex;
-    gap: 8px;
+    gap: 12px;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
   }
 
   .mini-thumb {
-    width: 60px;
-    height: 80px;
-    border-radius: 4px;
-    border: 2px solid;
-    position: relative;
+    flex: 1;
+    min-width: 140px;
+    max-width: 160px;
+    border-radius: 6px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease;
+  }
+
+  .mini-thumb:hover {
+    transform: translateY(-4px);
+  }
+
+  .mini-accent {
+    height: 28px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-  }
-
-  .mini-thumb::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 16px;
-    opacity: 0.8;
-  }
-
-  .mini-thumb::after {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 9px;
-    letter-spacing: 1px;
-    position: absolute;
-    top: 3px;
+    font-size: 11px;
+    letter-spacing: 3px;
     color: rgba(0,0,0,0.8);
     font-weight: 900;
   }
 
-  .mini-gold {
-    background: linear-gradient(160deg, #1E1608, #0F0D08);
-    border-color: var(--gold);
-    box-shadow: 0 4px 12px rgba(201,168,76,0.3);
+  .mini-inner {
+    padding: 16px 14px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
 
-  .mini-gold::before {
+  .mini-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 8px;
+  }
+
+  .mini-rule {
+    width: 24px;
+    height: 1px;
+    margin-bottom: 8px;
+  }
+
+  .mini-copy {
+    font-size: 9px;
+    line-height: 1.5;
+    color: rgba(245,240,232,0.75);
+    font-weight: 500;
+  }
+
+  /* Gold guide */
+  .mini-gold {
+    background: linear-gradient(160deg, #0F0D08, #1E1608, #0F0D08);
+    border: 2px solid var(--gold);
+  }
+
+  .mini-gold .mini-accent {
     background: linear-gradient(90deg, var(--gold-dark), var(--gold-light), var(--gold-dark));
   }
 
-  .mini-gold::after {
-    content: 'GUIDE';
+  .mini-gold .mini-title {
+    color: var(--gold-light);
   }
 
+  .mini-gold .mini-rule {
+    background: linear-gradient(90deg, var(--gold), transparent);
+  }
+
+  /* Red guide */
   .mini-red {
-    background: linear-gradient(160deg, #1C0D0D, #0E0808);
-    border-color: #C0392B;
-    box-shadow: 0 4px 12px rgba(192,57,43,0.3);
+    background: linear-gradient(160deg, #0E0808, #1C0D0D, #0E0808);
+    border: 2px solid #C0392B;
   }
 
-  .mini-red::before {
+  .mini-red .mini-accent {
     background: linear-gradient(90deg, #7B1A1A, #C0392B, #7B1A1A);
   }
 
-  .mini-red::after {
-    content: 'GUIDE';
+  .mini-red .mini-title {
+    color: #FFB3B3;
   }
 
+  .mini-red .mini-rule {
+    background: linear-gradient(90deg, #C0392B, transparent);
+  }
+
+  /* Blue guide */
   .mini-blue {
-    background: linear-gradient(160deg, #0D1620, #07090E);
-    border-color: #2E86C1;
-    box-shadow: 0 4px 12px rgba(46,134,193,0.3);
+    background: linear-gradient(160deg, #07090E, #0D1620, #07090E);
+    border: 2px solid #2E86C1;
   }
 
-  .mini-blue::before {
+  .mini-blue .mini-accent {
     background: linear-gradient(90deg, #1A3A5C, #2E86C1, #1A3A5C);
   }
 
-  .mini-blue::after {
-    content: 'GUIDE';
+  .mini-blue .mini-title {
+    color: #AED6F1;
+  }
+
+  .mini-blue .mini-rule {
+    background: linear-gradient(90deg, #2E86C1, transparent);
   }
 
   /* Books preview */
@@ -357,9 +393,34 @@
 
     <a href="free-guide.html" class="cta-card cta-guides">
       <div class="guide-preview">
-        <div class="mini-thumb mini-gold"></div>
-        <div class="mini-thumb mini-red"></div>
-        <div class="mini-thumb mini-blue"></div>
+        
+        <div class="mini-thumb mini-gold">
+          <div class="mini-accent">FREE GUIDE</div>
+          <div class="mini-inner">
+            <div class="mini-title">The Private Metals<br><em>Cheat Sheet</em></div>
+            <div class="mini-rule"></div>
+            <div class="mini-copy">Which coins keep transactions 100% off the radar</div>
+          </div>
+        </div>
+
+        <div class="mini-thumb mini-red">
+          <div class="mini-accent">FREE GUIDE</div>
+          <div class="mini-inner">
+            <div class="mini-title">7 Warning Signs<br><em>Your Dealer Is Ripping You Off</em></div>
+            <div class="mini-rule"></div>
+            <div class="mini-copy">Documented tactics dealers use</div>
+          </div>
+        </div>
+
+        <div class="mini-thumb mini-blue">
+          <div class="mini-accent">FREE GUIDE</div>
+          <div class="mini-inner">
+            <div class="mini-title">The 5-Step<br><em>Privacy Checklist</em></div>
+            <div class="mini-rule"></div>
+            <div class="mini-copy">What to think through before buying</div>
+          </div>
+        </div>
+
       </div>
       <div class="title">Get Your 3 Free Guides</div>
       <div class="url">metalsmadesimple.com/free-guide</div>
