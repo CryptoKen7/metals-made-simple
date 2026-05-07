@@ -9,6 +9,11 @@
       "source": "/review-privately",
       "destination": "/review-privately.html",
       "permanent": false
+    },
+    {
+      "source": "/books",
+      "destination": "/books.html",
+      "permanent": false
     }
   ]
 }
