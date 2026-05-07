@@ -253,6 +253,27 @@
     content: 'GUIDE';
   }
 
+  /* Books preview */
+  .books-preview {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .book-thumb {
+    width: 70px;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+  }
+
+  .book-thumb:hover {
+    transform: scale(1.05);
+  }
+
   /* Metals image visual */
   .metals-visual {
     width: 100%;
@@ -323,7 +344,12 @@
   <div class="cta-grid">
     
     <a href="https://books.metalsmadesimple.com" class="cta-card">
-      <span class="icon">📚</span>
+      <div class="books-preview">
+        <img src="book1.jpg" alt="Book Cover" class="book-thumb">
+        <img src="book2.jpg" alt="Book Cover" class="book-thumb">
+        <img src="book3.jpg" alt="Book Cover" class="book-thumb">
+        <img src="book4.jpg" alt="Book Cover" class="book-thumb">
+      </div>
       <div class="title">Browse Other Gold & Silver Books</div>
       <div class="url">books.metalsmadesimple.com</div>
     </a>
