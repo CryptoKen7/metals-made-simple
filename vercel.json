@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/save",
+      "destination": "/save.html",
+      "permanent": false
+    }
+  ]
+}
