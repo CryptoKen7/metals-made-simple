@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metals Made Simple — Practical Guides for Precious Metals Investors</title>
+<meta name="description" content="Plain-English guides for buying, holding, and selling gold and silver privately, tax-smart, and without overpaying.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C96A;
+    --gold-dark: #8B6914;
+    --gold-pale: #F5E6C0;
+    --black: #080706;
+    --charcoal: #111009;
+    --white: #F5F0E8;
+    --muted: rgba(245,240,232,0.7);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(201,168,76,0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 20% 100%, rgba(201,168,76,0.05) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .page-wrap {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .logo-section {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .series-badge {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 14px;
+    letter-spacing: 5px;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .gold-divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-dark), transparent);
+    margin: 0 auto;
+  }
+
+  .hero {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 20px;
+    text-shadow: 0 2px 30px rgba(201,168,76,0.2);
+  }
+
+  .hero .subheadline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--gold-light);
+    margin-bottom: 32px;
+    line-height: 1.5;
+  }
+
+  .gold-rule {
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 0 auto 32px;
+  }
+
+  .intro-text {
+    font-size: 17px;
+    line-height: 1.85;
+    color: var(--muted);
+    max-width: 680px;
+    margin: 0 auto 60px;
+    text-align: center;
+  }
+
+  .intro-text strong {
+    color: var(--white);
+    font-weight: 600;
+  }
+
+  .cta-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 60px;
+  }
+
+  .cta-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 8px;
+    padding: 32px 36px;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+    display: block;
+  }
+
+  .cta-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(201,168,76,0.5);
+    background: rgba(255,255,255,0.05);
+  }
+
+  .cta-card .icon {
+    font-size: 40px;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .cta-card .title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+
+  .cta-card .url {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: var(--gold);
+    letter-spacing: 0.5px;
+  }
+
+  .footer {
+    text-align: center;
+    padding-top: 40px;
+    border-top: 1px solid rgba(201,168,76,0.15);
+    width: 100%;
+  }
+
+  .footer-text {
+    font-size: 12px;
+    color: rgba(245,240,232,0.4);
+    letter-spacing: 1px;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .logo-section { animation: fadeUp 0.6s ease forwards; }
+  .hero { animation: fadeUp 0.8s ease 0.1s both; }
+  .intro-text { animation: fadeUp 0.8s ease 0.2s both; }
+  .cta-grid { animation: fadeUp 0.8s ease 0.3s both; }
+  .footer { animation: fadeUp 0.8s ease 0.4s both; }
+
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 42px; }
+    .hero .subheadline { font-size: 20px; }
+    .intro-text { font-size: 16px; }
+  }
+
+</style>
+</head>
+<body>
+
+<div class="page-wrap">
+
+  <div class="logo-section">
+    <div class="series-badge">✦ METALS MADE SIMPLE SERIES ✦</div>
+    <div class="gold-divider"></div>
+  </div>
+
+  <div class="hero">
+    <h1>Welcome to<br>Metals Made Simple</h1>
+    <div class="subheadline">Practical, Plain-English Guides for Precious Metals Investors</div>
+    <div class="gold-rule"></div>
+  </div>
+
+  <div class="intro-text">
+    Metals Made Simple is a series of books and resources designed to help everyday investors buy, hold, and sell gold and silver <strong>the right way</strong> — privately, tax-smart, and without overpaying. No hype. No complicated jargon. Just straight talk from someone who has been investing in precious metals for over 30 years.
+  </div>
+
+  <div class="cta-grid">
+    
+    <a href="https://books.metalsmadesimple.com" class="cta-card">
+      <span class="icon">📚</span>
+      <div class="title">Browse the Books</div>
+      <div class="url">books.metalsmadesimple.com</div>
+    </a>
+
+    <a href="free-guide.html" class="cta-card">
+      <span class="icon">⬇️</span>
+      <div class="title">Get Your 3 Free Guides</div>
+      <div class="url">metalsmadesimple.com/free-guide</div>
+    </a>
+
+    <a href="https://save.metalsmadesimple.com" class="cta-card">
+      <span class="icon">💰</span>
+      <div class="title">Find the Lowest Metals Prices</div>
+      <div class="url">save.metalsmadesimple.com</div>
+    </a>
+
+  </div>
+
+  <div class="footer">
+    <div class="footer-text">© Doyle Shuler — Metals Made Simple Series</div>
+  </div>
+
+</div>
+
+</body>
+</html>
