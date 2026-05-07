@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download Guide 2 — 7 Warning Signs Your Dealer Is Ripping You Off</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+  :root {
+    --gold: #C9A84C;
+    --red: #C0392B;
+    --red-light: #FFB3B3;
+    --black: #080706;
+    --white: #F5F0E8;
+    --muted: rgba(245,240,232,0.6);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(192,57,43,0.08) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    text-align: center;
+  }
+
+  .icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 32px;
+    background: linear-gradient(135deg, #7B1A1A, var(--red));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  .series {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 12px;
+    line-height: 1.15;
+  }
+
+  h1 em {
+    color: var(--red-light);
+    font-style: italic;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    color: var(--muted);
+    margin-bottom: 40px;
+    line-height: 1.7;
+  }
+
+  .download-btn {
+    display: inline-block;
+    padding: 18px 48px;
+    background: linear-gradient(135deg, #FF6B6B, #C0392B, #8B1F1F);
+    border: none;
+    border-radius: 6px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 4px;
+    color: #FFFFFF;
+    font-weight: 900;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    margin-bottom: 24px;
+  }
+
+  .download-btn:hover {
+    opacity: 0.92;
+    transform: translateY(-2px);
+  }
+
+  .note {
+    font-size: 13px;
+    color: rgba(245,240,232,0.5);
+    font-style: italic;
+    margin-bottom: 40px;
+  }
+
+  .back-link {
+    font-size: 14px;
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+  }
+
+  .back-link:hover {
+    border-bottom-color: var(--gold);
+  }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="icon">⚠️</div>
+  
+  <div class="series">✦ METALS MADE SIMPLE SERIES ✦</div>
+  
+  <h1>7 Warning Signs<br>Your Dealer Is <em>Ripping You Off</em></h1>
+  
+  <div class="subtitle">
+    What to watch for before you hand over a single dollar — from someone who has seen it all over 30 years in the metals market
+  </div>
+  
+  <a href="guide2.pdf" download class="download-btn">Download PDF Guide</a>
+  
+  <div class="note">Click above to download your free guide (PDF format)</div>
+  
+  <a href="free-guide.html" class="back-link">← Back to Free Guides Page</a>
+</div>
+
+</body>
+</html>
