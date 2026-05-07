@@ -476,18 +476,48 @@
     <div class="form-box">
       <!-- Aweber Form -->
       <div class="AW-Form-637560749"></div>
-      <script type="text/javascript">(function(d, s, id) {
-       var js, fjs = d.getElementsByTagName(s)[0];
-       if (d.getElementById(id)) return;
-       js = d.createElement(s); js.id = id;
-       js.src = "https://forms.aweber.com/form/49/637560749.js";
-       fjs.parentNode.insertBefore(js, fjs);
-       }(document, "script", "aweber-wjs-d2cvuqa8c"));
+      <script type="text/javascript">
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); 
+        js.id = id;
+        js.src = "https://forms.aweber.com/form/49/637560749.js";
+        js.async = true;
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, "script", "aweber-wjs-d2cvuqa8c"));
       </script>
       
-      <noscript>
-        <p style="color: var(--gold); margin: 20px 0;">Please enable JavaScript to view the signup form.</p>
-      </noscript>
+      <!-- Fallback form if Aweber doesn't load -->
+      <div id="fallback-form" style="display:none;">
+        <form action="https://www.aweber.com/scripts/addlead.pl" method="post" accept-charset="UTF-8" style="margin:0;">
+          <input type="hidden" name="meta_web_form_id" value="637560749" />
+          <input type="hidden" name="listname" value="awlist6954514" />
+          <input type="hidden" name="redirect" value="https://metalsmadesimple.com/thank-you" />
+          <input type="hidden" name="meta_adtracking" value="Metals_Made_Simple_Free_Guides" />
+          <input type="hidden" name="meta_message" value="1" />
+          <input type="hidden" name="meta_required" value="name,email" />
+          
+          <div style="margin-bottom: 14px;">
+            <input type="text" name="name" placeholder="Your First Name" required style="width: 100%; background: rgba(0,0,0,0.4); border: 1px solid rgba(201,168,76,0.25); border-radius: 4px; padding: 14px 18px; font-family: 'Montserrat', sans-serif; font-size: 14px; color: var(--white); outline: none;" />
+          </div>
+          <div style="margin-bottom: 14px;">
+            <input type="email" name="email" placeholder="Your Email Address" required style="width: 100%; background: rgba(0,0,0,0.4); border: 1px solid rgba(201,168,76,0.25); border-radius: 4px; padding: 14px 18px; font-family: 'Montserrat', sans-serif; font-size: 14px; color: var(--white); outline: none;" />
+          </div>
+          <button type="submit" style="width: 100%; padding: 16px 24px; background: linear-gradient(135deg, #FFE680, #F0C030, #D4A017); border: none; border-radius: 4px; font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 4px; color: #000000; font-weight: 900; cursor: pointer; margin-top: 6px;">Send Me My Free Guides</button>
+        </form>
+      </div>
+      
+      <script>
+      // Show fallback form after 3 seconds if Aweber hasn't loaded
+      setTimeout(function() {
+        var aweberForm = document.querySelector('.AW-Form-637560749');
+        var fallback = document.getElementById('fallback-form');
+        if (aweberForm && aweberForm.children.length === 0) {
+          fallback.style.display = 'block';
+        }
+      }, 3000);
+      </script>
       
       <div class="delivery-note">
         <strong>Your 3 free guides will be sent instantly to the email address you provide.</strong><br>
