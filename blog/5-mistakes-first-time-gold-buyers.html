@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5 Mistakes First-Time Gold Buyers Make — Metals Made Simple</title>
+<meta name="description" content="Learn the 5 most common mistakes first-time gold buyers make and how to avoid them before spending a single dollar.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C96A;
+    --gold-dark: #8B6914;
+    --black: #080706;
+    --charcoal: #111009;
+    --white: #F5F0E8;
+    --muted: rgba(245,240,232,0.7);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
+  }
+
+  /* Header Navigation */
+  .header-nav {
+    background: rgba(0,0,0,0.95);
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+  }
+
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .site-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+
+  .nav-links a:hover {
+    color: var(--gold);
+  }
+
+  /* Article Container */
+  .article-container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 32px;
+  }
+
+  .article-meta {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    font-size: 13px;
+    color: var(--gold);
+    font-weight: 600;
+  }
+
+  .article-date {
+    opacity: 0.7;
+  }
+
+  .article-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 32px;
+  }
+
+  .article-intro {
+    font-size: 20px;
+    color: var(--gold-light);
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+  }
+
+  .article-content {
+    font-size: 17px;
+    color: var(--white);
+    line-height: 1.8;
+  }
+
+  .article-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-top: 48px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .article-content h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--white);
+    margin-top: 36px;
+    margin-bottom: 16px;
+  }
+
+  .article-content p {
+    margin-bottom: 24px;
+  }
+
+  .article-content strong {
+    color: var(--gold-light);
+    font-weight: 700;
+  }
+
+  .article-content ul, .article-content ol {
+    margin-left: 24px;
+    margin-bottom: 24px;
+  }
+
+  .article-content li {
+    margin-bottom: 12px;
+  }
+
+  .article-content a {
+    color: var(--gold);
+    text-decoration: underline;
+  }
+
+  .article-content a:hover {
+    color: var(--gold-light);
+  }
+
+  /* Call-to-Action Box */
+  .cta-box {
+    background: rgba(201,168,76,0.08);
+    border: 2px solid var(--gold);
+    border-radius: 12px;
+    padding: 40px;
+    margin: 60px 0;
+    text-align: center;
+  }
+
+  .cta-box h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-bottom: 16px;
+  }
+
+  .cta-box p {
+    font-size: 16px;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--black);
+    padding: 14px 32px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+
+  .cta-button:hover {
+    background: var(--gold-light);
+  }
+
+  /* Back Link */
+  .back-link {
+    display: inline-block;
+    color: var(--gold);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 32px;
+  }
+
+  .back-link:hover {
+    color: var(--gold-light);
+  }
+
+  /* Footer */
+  .footer {
+    background: var(--charcoal);
+    padding: 40px 32px;
+    text-align: center;
+    border-top: 1px solid rgba(201,168,76,0.1);
+    margin-top: 80px;
+  }
+
+  .footer-brand {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: rgba(201,168,76,0.4);
+    margin-bottom: 6px;
+  }
+
+  .footer-copy {
+    font-size: 10px;
+    color: rgba(245,240,232,0.2);
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 768px) {
+    .article-title { font-size: 36px; }
+    .article-intro { font-size: 18px; }
+    .article-content { font-size: 16px; }
+    .nav-links { gap: 20px; font-size: 13px; }
+  }
+
+</style>
+</head>
+<body>
+
+<nav class="header-nav">
+  <div class="nav-container">
+    <a href="../index.html" class="site-logo">✦ METALS MADE SIMPLE ✦</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../free-guide.html">Free Guides</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<article class="article-container">
+  
+  <a href="../blog.html" class="back-link">← Back to Blog</a>
+
+  <div class="article-meta">
+    <span class="article-category">Buying Tips</span>
+    <span class="article-date">May 8, 2026</span>
+  </div>
+
+  <h1 class="article-title">5 Mistakes First-Time Gold Buyers Make (And How to Avoid Them)</h1>
+
+  <p class="article-intro">
+    Most first-time precious metals buyers make the same avoidable mistakes. Learn what they are before you buy your first coin, and save yourself headaches and money down the road.
+  </p>
+
+  <div class="article-content">
+
+    <p>If you're reading this, you're probably thinking about buying gold or silver for the first time. Maybe you're worried about inflation. Maybe you want to diversify. Maybe you just want something tangible that holds value.</p>
+
+    <p>Whatever your reason, you're smart to do research first.</p>
+
+    <p>Because here's the truth: <strong>most first-time buyers make predictable, avoidable mistakes that cost them money, privacy, or both.</strong></p>
+
+    <p>I've been in this market for over 30 years. I've seen these mistakes play out hundreds of times. And I'm going to walk you through the most common ones—and how to avoid them—before you spend a single dollar.</p>
+
+    <h2>Mistake #1: Buying the Wrong Type of Metal</h2>
+
+    <p>Not all gold and silver are created equal when it comes to privacy and liquidity.</p>
+
+    <p>Some coins can be bought and sold in any quantity with zero IRS reporting. Others trigger a Form 1099-B when you sell above certain thresholds.</p>
+
+    <p><strong>The problem:</strong> Most first-time buyers have no idea this distinction exists. They buy whatever looks shiny or has the lowest premium—and then discover years later that selling it will trigger IRS reporting.</p>
+
+    <p><strong>The solution:</strong> Stick to government-minted bullion coins that stay non-reportable no matter how much you sell:</p>
+
+    <ul>
+      <li>American Gold Eagles</li>
+      <li>American Gold Buffalos</li>
+      <li>American Silver Eagles</li>
+      <li>Austrian Philharmonics (gold)</li>
+    </ul>
+
+    <p>These coins give you the freedom to sell any quantity, any time, with no IRS forms involved.</p>
+
+    <h2>Mistake #2: Paying With Cash (Over $10,000)</h2>
+
+    <p>Here's something most dealers won't tell you upfront: <strong>how you pay matters just as much as what you buy.</strong></p>
+
+    <p>If you pay with actual cash—currency, money orders, cashier's checks—over $10,000, your dealer is required to file IRS Form 8300 reporting the cash transaction itself.</p>
+
+    <p>This has nothing to do with the metals. It's a separate cash-reporting requirement. And it puts your purchase on the radar.</p>
+
+    <p><strong>The solution:</strong> Pay by personal check or bank wire. These methods are not considered "cash" under IRS rules, so no reporting is triggered—regardless of how much you spend.</p>
+
+    <h2>Mistake #3: Not Planning Your Exit Strategy</h2>
+
+    <p>Most buyers spend all their time thinking about what to buy and zero time thinking about how they'll eventually sell.</p>
+
+    <p>This is backwards.</p>
+
+    <p><strong>The type of metal you buy today directly determines how privately—and how easily—you can sell it tomorrow.</strong></p>
+
+    <p>Metals prices can move fast. If you need or want to liquidate at the right moment, being locked into reportable metals or metals with limited buyers could cost you the opportunity entirely.</p>
+
+    <p><strong>The solution:</strong> Before you buy, ask yourself: <em>"If I needed to sell all of this next week, how would that transaction look?"</em></p>
+
+    <p>If the answer involves IRS forms, multiple dealers, or complicated logistics, you're probably buying the wrong thing.</p>
+
+    <h2>Mistake #4: Falling for Numismatic Upsells</h2>
+
+    <p>Some dealers will try to steer you toward numismatic or "collectible" coins instead of bullion.</p>
+
+    <p>Their pitch usually sounds like this: <em>"These coins have collectible value on top of the metal value. You're getting two investments in one."</em></p>
+
+    <p>Here's the reality: <strong>Unless you're an experienced numismatist, you're probably overpaying for something you don't understand.</strong></p>
+
+    <p>Numismatic coins can be legitimate investments—for people who know what they're doing. For everyone else, they're a way for dealers to earn much higher commissions.</p>
+
+    <p><strong>The solution:</strong> Stick to bullion. It's simple, liquid, and easy to price. You know exactly what you're paying (spot price + a small premium), and you can sell it anywhere.</p>
+
+    <h2>Mistake #5: Not Knowing the Dealer's Markup</h2>
+
+    <p>One of the simplest—and most important—questions you can ask any dealer is this:</p>
+
+    <p><strong>"What is today's spot price, and what am I paying above it?"</strong></p>
+
+    <p>A dealer who's confident in their pricing will answer directly and without hesitation.</p>
+
+    <p>A dealer who becomes evasive, changes the subject, or refuses to break it down? That's a red flag.</p>
+
+    <p><strong>The solution:</strong> Before you call any dealer, look up the current spot price independently (Kitco.com is a good source). Then ask the dealer to tell you their price above spot.</p>
+
+    <p>Standard bullion markups typically range from 1% to 8% over spot. If you're being quoted significantly higher, ask why—or walk away.</p>
+
+    <div class="cta-box">
+      <h3>Want All Three Free Guides?</h3>
+      <p>Get the complete Private Metals Cheat Sheet, 7 Warning Signs, and 5-Step Privacy Checklist—free.</p>
+      <a href="../free-guide.html" class="cta-button">Get Your Free Guides</a>
+    </div>
+
+    <h2>Final Thoughts</h2>
+
+    <p>Buying gold and silver doesn't have to be complicated. But it does require knowing a few key things before you start.</p>
+
+    <p>Avoid these five mistakes and you'll be ahead of 90% of first-time buyers.</p>
+
+    <p>Buy the right metals. Pay the right way. Plan your exit. Avoid numismatic upsells. Know what you're paying.</p>
+
+    <p>Do that, and you'll sleep better knowing your investment is private, liquid, and positioned exactly the way you want it.</p>
+
+  </div>
+
+</article>
+
+<div class="footer">
+  <div class="footer-brand">MetalsMadeSimple.com &nbsp;·&nbsp; Metals Made Simple Series</div>
+  <div class="footer-copy">© Doyle Shuler. All rights reserved.</div>
+</div>
+
+</body>
+</html>
