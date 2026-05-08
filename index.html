@@ -42,12 +42,60 @@
     z-index: 0;
   }
 
+  /* Header Navigation */
+  .header-nav {
+    background: rgba(0,0,0,0.95);
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+  }
+
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .site-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+
+  .nav-links a:hover {
+    color: var(--gold);
+  }
+
   .page-wrap {
     position: relative;
     z-index: 1;
     max-width: 900px;
     margin: 0 auto;
-    padding: 80px 32px;
+    padding: 100px 32px 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -360,6 +408,18 @@
 </head>
 <body>
 
+<nav class="header-nav">
+  <div class="nav-container">
+    <a href="index.html" class="site-logo">✦ METALS MADE SIMPLE ✦</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="free-guide.html">Free Guides</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
 <div class="page-wrap">
 
   <div class="logo-section">
@@ -379,7 +439,7 @@
 
   <div class="cta-grid">
     
-    <a href="https://books.metalsmadesimple.com" class="cta-card">
+    <a href="books.html" target="_blank" rel="noopener" class="cta-card">
       <div class="books-preview">
         <img src="book1.jpg" alt="Book Cover" class="book-thumb">
         <img src="book2.jpg" alt="Book Cover" class="book-thumb">
@@ -426,7 +486,7 @@
       <div class="url">metalsmadesimple.com/free-guide</div>
     </a>
 
-    <a href="https://save.metalsmadesimple.com" class="cta-card">
+    <a href="save.html" target="_blank" rel="noopener" class="cta-card">
       <div class="metals-visual">
         <img src="metals-image.jpg" alt="Gold and Silver Coins" />
       </div>
